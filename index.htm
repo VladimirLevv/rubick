@@ -1,5 +1,6 @@
 <html lang="en">
-<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Rubik's Cube Solver - Best Way to Solve Rubik Cube Online</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 	<meta name="description" content="Here you can easily solve Rubik's Cube 3x3 Online!">
@@ -7,55 +8,45 @@
 	<script type="text/javascript" src="./js/solver.js"></script>
 	<script type="text/javascript" src="./js/flat.js"></script>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/entireframework.min.css">
 	<link href="https://rubik-cube-solver.com/favicon.ico" rel="icon" type="image/x-icon" />
 	<meta name="google-site-verification" content="gLQfdZHAb9WXNlAEXan_R1sjvNX3XeJWexwhRxu2XuI" />
 </head>
 <body>
-<div class='content'>
-	<div class='header'>
-		<div class='logo-container'>
-			<canvas id='logo' width='60' height='60'></canvas>
+	<nav class="nav" tabindex="-1" onclick="this.focus()">
+		<div class="container">
+			<a class="pagename current" href="#">Min</a>
+			<a href="#">One</a>
+			<a href="#">Two</a> 
+			<a href="#">Three</a>
 		</div>
-		<h1>
-		Rubik's Cube Solver Online
-		</h1>
-	<div class='nav'>
-		<ul>
-			<a href='/#home'>
-				<li class='nav-home'>home</li>
-			</a>
-			<a href='/#projects'>
-				<li class='nav-projects'>projects</li>
-			</a>
-			<a href='/#about'>
-				<li class='nav-about'>about</li>
-			</a>
-		</ul>
+	</nav>
+	<button class="btn-close btn btn-sm">×</button>
+	<h1>Rubik's Cube Solver Online</h1>
+	<div class='content'>
+		<section style='position:relative;'>
+			<canvas id="cube" style='position:absolute;left:15px;top:15px;'>HTML5 CANVAS</canvas>
+			<div id='controls'></div>
+			<div id='flat-cube'></div>
+		</section>
 	</div>
-	</div>
-	<section style='position:relative;'>
-		<canvas id="cube" style='position:absolute;left:15px;top:15px;'>HTML5 CANVAS</canvas>
-		<div id='controls'></div>
-		<div id='flat-cube'></div>
-	</section>
-</div>
 
 
-<script type="text/javascript">
+	<script type="text/javascript">
 
-var cube, cube2;
-var flatCube, controls;
+		var cube, cube2;
+		var flatCube, controls;
 
 /**********************************
  * Main Loop
  **********************************/
-var run = function () {
-	cube.tick();
-	cube.render();
-	if(cube2){
-		cube2.tick();
-		cube2.render();
-	}
+ var run = function () {
+ 	cube.tick();
+ 	cube.render();
+ 	if(cube2){
+ 		cube2.tick();
+ 		cube2.render();
+ 	}
 	// ---- animation loop ----
 	requestAnimationFrame(run);
 }
