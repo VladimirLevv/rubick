@@ -11,19 +11,18 @@
 	<link rel="stylesheet" type="text/css" href="./css/entireframework.min.css">
 	<link href="https://rubik-cube-solver.com/favicon.ico" rel="icon" type="image/x-icon" />
 	<meta name="google-site-verification" content="gLQfdZHAb9WXNlAEXan_R1sjvNX3XeJWexwhRxu2XuI" />
+	<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/uk_UA/sdk.js#xfbml=1&version=v8.0" nonce="dW1VOUor"></script>
 </head>
 <body>
 	<nav class="nav" tabindex="-1" onclick="this.focus()">
 		<div class="container">
-			<a class="pagename current" href="#">Min</a>
-			<a href="#">One</a>
-			<a href="#">Two</a> 
-			<a href="#">Three</a>
+			<a class="pagename current" href="https://rubik-cube-solver.com/">Rubik's Cube Solver</a>
 		</div>
 	</nav>
 	<button class="btn-close btn btn-sm">×</button>
-	<h1>Rubik's Cube Solver Online</h1>
 	<div class='content'>
+		<h1>Rubik's Cube Solver Online</h1>
 		<section style='position:relative;'>
 			<canvas id="cube" style='position:absolute;left:15px;top:15px;'>HTML5 CANVAS</canvas>
 			<div id='controls'></div>
@@ -142,6 +141,7 @@ var solve = function(){
 		cube2.makeMoves(solver.solve(cube2.getState()));
 };
 </script>
+<div class="fb-comments" data-href="https://rubik-cube-solver.com/" data-numposts="10" data-width=""></div>
 </body>
 
 </html>
